@@ -16,6 +16,7 @@
 		D0382354215CC77F00FF5445 /* WebHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D0382353215CC77F00FF5445 /* WebHelper.m */; };
 		D038235A215CD28300FF5445 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D038235C215CD28300FF5445 /* Localizable.strings */; };
 		D038235F215CD99A00FF5445 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D038235E215CD99A00FF5445 /* GoogleService-Info.plist */; };
+		D0382362215CEB7D00FF5445 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = D0382361215CEB7D00FF5445 /* Config.m */; };
 		D05FEA819666234679C80511 /* libPods-Loodos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4C334BEDEF01295F96520C /* libPods-Loodos.a */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,8 @@
 		D038235B215CD28300FF5445 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D038235D215CD28400FF5445 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D038235E215CD99A00FF5445 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D0382360215CEB7D00FF5445 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		D0382361215CEB7D00FF5445 /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		DC4C334BEDEF01295F96520C /* libPods-Loodos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Loodos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +109,8 @@
 				D029B3D7215CC48600FABB2A /* Loodos-Prefix.pch */,
 				D0382352215CC77F00FF5445 /* WebHelper.h */,
 				D0382353215CC77F00FF5445 /* WebHelper.m */,
+				D0382360215CEB7D00FF5445 /* Config.h */,
+				D0382361215CEB7D00FF5445 /* Config.m */,
 			);
 			path = Loodos;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0382362215CEB7D00FF5445 /* Config.m in Sources */,
 				D0382354215CC77F00FF5445 /* WebHelper.m in Sources */,
 				D029B3CD215C112800FABB2A /* main.m in Sources */,
 				D029B3BF215C112000FABB2A /* AppDelegate.m in Sources */,

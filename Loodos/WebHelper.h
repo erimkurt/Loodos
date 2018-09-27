@@ -10,8 +10,8 @@
 
 typedef void (^ APISuccessBlock)(id result);
 @interface WebHelper : NSObject
-@property(nonatomic,strong) NSString* path;
-@property(nonatomic,strong) NSString* apiKey;
+@property(nonatomic, strong) NSString* path;
+@property(nonatomic, strong) NSString* apiKey;
 + (WebHelper *) sharedInstance;
 
 @end
