@@ -8,24 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		D029B3BF215C112000FABB2A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D029B3BE215C112000FABB2A /* AppDelegate.m */; };
-		D029B3C2215C112000FABB2A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D029B3C1215C112000FABB2A /* ViewController.m */; };
 		D029B3C5215C112000FABB2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D029B3C3215C112000FABB2A /* Main.storyboard */; };
 		D029B3C7215C112800FABB2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D029B3C6215C112800FABB2A /* Assets.xcassets */; };
 		D029B3CA215C112800FABB2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D029B3C8215C112800FABB2A /* LaunchScreen.storyboard */; };
 		D029B3CD215C112800FABB2A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D029B3CC215C112800FABB2A /* main.m */; };
+		D029B3D5215CC33C00FABB2A /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D029B3D4215CC33C00FABB2A /* SplashViewController.m */; };
+		D0382354215CC77F00FF5445 /* WebHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D0382353215CC77F00FF5445 /* WebHelper.m */; };
+		D038235A215CD28300FF5445 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D038235C215CD28300FF5445 /* Localizable.strings */; };
+		D05FEA819666234679C80511 /* libPods-Loodos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4C334BEDEF01295F96520C /* libPods-Loodos.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		087C2D7D8C1E5455B6162EB0 /* Pods-Loodos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loodos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Loodos/Pods-Loodos.release.xcconfig"; sourceTree = "<group>"; };
+		6EC8DD1FB389B3867E3D0C51 /* Pods-Loodos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loodos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Loodos/Pods-Loodos.debug.xcconfig"; sourceTree = "<group>"; };
 		D029B3BA215C112000FABB2A /* Loodos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loodos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D029B3BD215C112000FABB2A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D029B3BE215C112000FABB2A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D029B3C0215C112000FABB2A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D029B3C1215C112000FABB2A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D029B3C4215C112000FABB2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D029B3C6215C112800FABB2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D029B3C9215C112800FABB2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D029B3CB215C112800FABB2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D029B3CC215C112800FABB2A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D029B3D3215CC33C00FABB2A /* SplashViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		D029B3D4215CC33C00FABB2A /* SplashViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		D029B3D7215CC48600FABB2A /* Loodos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Loodos-Prefix.pch"; sourceTree = "<group>"; };
+		D0382352215CC77F00FF5445 /* WebHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebHelper.h; sourceTree = "<group>"; };
+		D0382353215CC77F00FF5445 /* WebHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebHelper.m; sourceTree = "<group>"; };
+		D0382358215CD27A00FF5445 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		D0382359215CD27A00FF5445 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D038235B215CD28300FF5445 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D038235D215CD28400FF5445 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DC4C334BEDEF01295F96520C /* libPods-Loodos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Loodos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +46,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05FEA819666234679C80511 /* libPods-Loodos.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29444AF92B257A7CA6EAC6CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC4C334BEDEF01295F96520C /* libPods-Loodos.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		354C06CD3D4C15A67848906C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EC8DD1FB389B3867E3D0C51 /* Pods-Loodos.debug.xcconfig */,
+				087C2D7D8C1E5455B6162EB0 /* Pods-Loodos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D029B3B1215C112000FABB2A = {
 			isa = PBXGroup;
 			children = (
 				D029B3BC215C112000FABB2A /* Loodos */,
 				D029B3BB215C112000FABB2A /* Products */,
+				354C06CD3D4C15A67848906C /* Pods */,
+				29444AF92B257A7CA6EAC6CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +91,37 @@
 		D029B3BC215C112000FABB2A /* Loodos */ = {
 			isa = PBXGroup;
 			children = (
+				D0382355215CD25300FF5445 /* Localizable */,
+				D029B3D6215CC34800FABB2A /* Screen */,
 				D029B3BD215C112000FABB2A /* AppDelegate.h */,
 				D029B3BE215C112000FABB2A /* AppDelegate.m */,
-				D029B3C0215C112000FABB2A /* ViewController.h */,
-				D029B3C1215C112000FABB2A /* ViewController.m */,
 				D029B3C3215C112000FABB2A /* Main.storyboard */,
 				D029B3C6215C112800FABB2A /* Assets.xcassets */,
 				D029B3C8215C112800FABB2A /* LaunchScreen.storyboard */,
 				D029B3CB215C112800FABB2A /* Info.plist */,
 				D029B3CC215C112800FABB2A /* main.m */,
+				D029B3D7215CC48600FABB2A /* Loodos-Prefix.pch */,
+				D0382352215CC77F00FF5445 /* WebHelper.h */,
+				D0382353215CC77F00FF5445 /* WebHelper.m */,
 			);
 			path = Loodos;
+			sourceTree = "<group>";
+		};
+		D029B3D6215CC34800FABB2A /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D029B3D3215CC33C00FABB2A /* SplashViewController.h */,
+				D029B3D4215CC33C00FABB2A /* SplashViewController.m */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		D0382355215CD25300FF5445 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				D038235C215CD28300FF5445 /* Localizable.strings */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +131,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D029B3D0215C112800FABB2A /* Build configuration list for PBXNativeTarget "Loodos" */;
 			buildPhases = (
+				75AC5339A9116140AC7E3FA5 /* [CP] Check Pods Manifest.lock */,
 				D029B3B6215C112000FABB2A /* Sources */,
 				D029B3B7215C112000FABB2A /* Frameworks */,
 				D029B3B8215C112000FABB2A /* Resources */,
@@ -112,6 +166,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = D029B3B1215C112000FABB2A;
 			productRefGroup = D029B3BB215C112000FABB2A /* Products */;
@@ -129,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D029B3CA215C112800FABB2A /* LaunchScreen.storyboard in Resources */,
+				D038235A215CD28300FF5445 /* Localizable.strings in Resources */,
 				D029B3C7215C112800FABB2A /* Assets.xcassets in Resources */,
 				D029B3C5215C112000FABB2A /* Main.storyboard in Resources */,
 			);
@@ -136,14 +192,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		75AC5339A9116140AC7E3FA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Loodos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D029B3B6215C112000FABB2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D029B3C2215C112000FABB2A /* ViewController.m in Sources */,
+				D0382354215CC77F00FF5445 /* WebHelper.m in Sources */,
 				D029B3CD215C112800FABB2A /* main.m in Sources */,
 				D029B3BF215C112000FABB2A /* AppDelegate.m in Sources */,
+				D029B3D5215CC33C00FABB2A /* SplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +232,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D029B3C4215C112000FABB2A /* Base */,
+				D0382358215CD27A00FF5445 /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -162,8 +241,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				D029B3C9215C112800FABB2A /* Base */,
+				D0382359215CD27A00FF5445 /* tr */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D038235C215CD28300FF5445 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D038235B215CD28300FF5445 /* en */,
+				D038235D215CD28400FF5445 /* tr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -173,6 +262,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -232,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -283,10 +374,14 @@
 		};
 		D029B3D1215C112800FABB2A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EC8DD1FB389B3867E3D0C51 /* Pods-Loodos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7V6T84YYL;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Loodos/Loodos-Prefix.pch";
 				INFOPLIST_FILE = Loodos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,10 +394,14 @@
 		};
 		D029B3D2215C112800FABB2A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 087C2D7D8C1E5455B6162EB0 /* Pods-Loodos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F7V6T84YYL;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Loodos/Loodos-Prefix.pch";
 				INFOPLIST_FILE = Loodos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

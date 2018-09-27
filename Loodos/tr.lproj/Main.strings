@@ -1,0 +1,9 @@
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "GXz-7x-v2M"; */
+"GXz-7x-v2M.title" = "Root View Controller";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "byA-ei-1G9"; */
+"byA-ei-1G9.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Tekrar Dene"; ObjectID = "wPC-80-NPf"; */
+"wPC-80-NPf.normalTitle" = "Tekrar Dene";

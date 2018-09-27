@@ -1,0 +1,14 @@
+//
+//  Loodos-Prefix.pch
+//  Loodos
+//
+//  Created by macbookair on 27.09.2018.
+//  Copyright © 2018 Erim Kurt. All rights reserved.
+//
+
+#ifndef Loodos_Prefix_pch
+#define Loodos_Prefix_pch
+
+#import <AFNetworking/AFNetworking.h>
+#import "WebHelper.h"
+#endif /* Loodos_Prefix_pch */
