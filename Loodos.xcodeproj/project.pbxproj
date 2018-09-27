@@ -17,6 +17,11 @@
 		D038235A215CD28300FF5445 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D038235C215CD28300FF5445 /* Localizable.strings */; };
 		D038235F215CD99A00FF5445 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D038235E215CD99A00FF5445 /* GoogleService-Info.plist */; };
 		D0382362215CEB7D00FF5445 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = D0382361215CEB7D00FF5445 /* Config.m */; };
+		D0382368215CFF0C00FF5445 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0382367215CFF0C00FF5445 /* MainTableViewController.m */; };
+		D038236B215D039A00FF5445 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D038236A215D039A00FF5445 /* MainTableViewCell.m */; };
+		D0382378215D1C8900FF5445 /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0382377215D1C8900FF5445 /* SearchModel.m */; };
+		D038237B215D1CBB00FF5445 /* ContentPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = D038237A215D1CBB00FF5445 /* ContentPreview.m */; };
+		D038237F215D25B700FF5445 /* UIView+LayerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = D038237E215D25B700FF5445 /* UIView+LayerRadius.m */; };
 		D05FEA819666234679C80511 /* libPods-Loodos.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4C334BEDEF01295F96520C /* libPods-Loodos.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +48,16 @@
 		D038235E215CD99A00FF5445 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D0382360215CEB7D00FF5445 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		D0382361215CEB7D00FF5445 /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		D0382366215CFF0C00FF5445 /* MainTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		D0382367215CFF0C00FF5445 /* MainTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		D0382369215D039A00FF5445 /* MainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		D038236A215D039A00FF5445 /* MainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
+		D0382376215D1C8900FF5445 /* SearchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
+		D0382377215D1C8900FF5445 /* SearchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
+		D0382379215D1CBB00FF5445 /* ContentPreview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentPreview.h; sourceTree = "<group>"; };
+		D038237A215D1CBB00FF5445 /* ContentPreview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentPreview.m; sourceTree = "<group>"; };
+		D038237D215D25B700FF5445 /* UIView+LayerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LayerRadius.h"; sourceTree = "<group>"; };
+		D038237E215D25B700FF5445 /* UIView+LayerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayerRadius.m"; sourceTree = "<group>"; };
 		DC4C334BEDEF01295F96520C /* libPods-Loodos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Loodos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -96,6 +111,8 @@
 		D029B3BC215C112000FABB2A /* Loodos */ = {
 			isa = PBXGroup;
 			children = (
+				D038237C215D257900FF5445 /* Extension */,
+				D038236D215D0B4000FF5445 /* Model */,
 				D0382355215CD25300FF5445 /* Localizable */,
 				D029B3D6215CC34800FABB2A /* Screen */,
 				D029B3BD215C112000FABB2A /* AppDelegate.h */,
@@ -118,8 +135,11 @@
 		D029B3D6215CC34800FABB2A /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				D038236C215D03A300FF5445 /* Cell */,
 				D029B3D3215CC33C00FABB2A /* SplashViewController.h */,
 				D029B3D4215CC33C00FABB2A /* SplashViewController.m */,
+				D0382366215CFF0C00FF5445 /* MainTableViewController.h */,
+				D0382367215CFF0C00FF5445 /* MainTableViewController.m */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -130,6 +150,35 @@
 				D038235C215CD28300FF5445 /* Localizable.strings */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		D038236C215D03A300FF5445 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D0382369215D039A00FF5445 /* MainTableViewCell.h */,
+				D038236A215D039A00FF5445 /* MainTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D038236D215D0B4000FF5445 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0382376215D1C8900FF5445 /* SearchModel.h */,
+				D0382377215D1C8900FF5445 /* SearchModel.m */,
+				D0382379215D1CBB00FF5445 /* ContentPreview.h */,
+				D038237A215D1CBB00FF5445 /* ContentPreview.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D038237C215D257900FF5445 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D038237D215D25B700FF5445 /* UIView+LayerRadius.h */,
+				D038237E215D25B700FF5445 /* UIView+LayerRadius.m */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,11 +276,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D038237F215D25B700FF5445 /* UIView+LayerRadius.m in Sources */,
+				D038237B215D1CBB00FF5445 /* ContentPreview.m in Sources */,
 				D0382362215CEB7D00FF5445 /* Config.m in Sources */,
 				D0382354215CC77F00FF5445 /* WebHelper.m in Sources */,
+				D038236B215D039A00FF5445 /* MainTableViewCell.m in Sources */,
+				D0382368215CFF0C00FF5445 /* MainTableViewController.m in Sources */,
 				D029B3CD215C112800FABB2A /* main.m in Sources */,
 				D029B3BF215C112000FABB2A /* AppDelegate.m in Sources */,
 				D029B3D5215CC33C00FABB2A /* SplashViewController.m in Sources */,
+				D0382378215D1C8900FF5445 /* SearchModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

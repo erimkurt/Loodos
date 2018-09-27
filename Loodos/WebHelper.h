@@ -14,4 +14,6 @@ typedef void (^ APISuccessBlock)(id result);
 @property(nonatomic, strong) NSString* apiKey;
 + (WebHelper *) sharedInstance;
 
+#pragma mark - Search content
+-(void)getSearchContent:(NSString*)searchString successBlock:(APISuccessBlock)successBlock errorBlock:(APISuccessBlock)errorBlock;
 @end

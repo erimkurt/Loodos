@@ -11,4 +11,6 @@ target 'Loodos' do
 pod 'AFNetworking', '~> 3.0'
 pod 'Firebase/Core'
 pod 'Firebase/RemoteConfig'
+pod 'JSONModel'
+pod 'SDWebImage', '~>3.8'
 end

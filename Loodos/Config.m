@@ -27,7 +27,7 @@
     self.remoteConfig.configSettings = remoteConfigSettings;
 }
 
-#pragma mark - Config Fetch
+#pragma mark - Config fetch
 -(void)getConfig:(void (^)(bool isSuccess))block{
     [self.remoteConfig fetchWithExpirationDuration:0 completionHandler:^(FIRRemoteConfigFetchStatus status, NSError *error) {
         if (status == FIRRemoteConfigFetchStatusSuccess) {

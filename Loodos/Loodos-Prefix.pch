@@ -9,10 +9,16 @@
 #ifndef Loodos_Prefix_pch
 #define Loodos_Prefix_pch
 #define AppNameConfigKeyName @"app_name_string"
+#define MainSegueIdentifier @"MainNavigationContoller"
 
 #import <AFNetworking/AFNetworking.h>
+#import <JSONModel/JSONModel.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIView+LayerRadius.h"
 #import "WebHelper.h"
 #import "Config.h"
+#import "SearchModel.h"
+#import "ContentPreview.h"
 @import Firebase;
 @import FirebaseRemoteConfig;
 

@@ -27,4 +27,20 @@
     return _instance;
 }
 
+#pragma mark - Search content
+-(void)getSearchContent:(NSString*)searchString successBlock:(APISuccessBlock)successBlock errorBlock:(APISuccessBlock)errorBlock{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:@"http://www.omdbapi.com/?apikey=5fc8e67e&s=star&page=1" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        successBlock([self convertJSONToString:responseObject]);
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        errorBlock(error);
+    }];
+}
+
+-(NSString*)convertJSONToString:(id)json{
+    NSData *data = [NSJSONSerialization dataWithJSONObject:json options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return jsonString;
+}
 @end

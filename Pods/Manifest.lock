@@ -69,17 +69,23 @@ PODS:
   - "GoogleUtilities/NSData+zlib (5.2.2)"
   - GoogleUtilities/Reachability (5.2.2):
     - GoogleUtilities/Logger
+  - JSONModel (1.7.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.6.1)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Firebase/Core
   - Firebase/RemoteConfig
+  - JSONModel
+  - SDWebImage (~> 3.8)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -92,8 +98,10 @@ SPEC REPOS:
     - FirebaseRemoteConfig
     - GoogleAppMeasurement
     - GoogleUtilities
+    - JSONModel
     - nanopb
     - Protobuf
+    - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -105,9 +113,11 @@ SPEC CHECKSUMS:
   FirebaseRemoteConfig: 7b6d675dfb11f0e0e638caee00908b06af150d56
   GoogleAppMeasurement: e785bdb86d3d280abc778156cec323a975f11d1d
   GoogleUtilities: 06b66f9567769a7958db20a92f0128b2843e49d5
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
 
-PODFILE CHECKSUM: 61af293f6d28db05d9e9b09caac739b97331fe3f
+PODFILE CHECKSUM: 8c8fdb2ca71e38b55db9f5756f58dcc183ec7055
 
 COCOAPODS: 1.5.3

@@ -36,6 +36,7 @@
                 dispatch_async(dispatch_get_main_queue(), ^{
                     if (isSuccess) {
                         self.titleLabel.text = [Config sharedInstance].nameString;
+                        [self performSelector:@selector(loginMainView) withObject:nil afterDelay:3.0];
                     }
                 });
             }];
@@ -44,6 +45,10 @@
             self.reachabilityButton.hidden = NO;
         }
     }];
+}
+
+-(void)loginMainView{
+    [self performSegueWithIdentifier:MainSegueIdentifier sender:nil];
 }
     
 - (IBAction)checkReachability:(id)sender {
