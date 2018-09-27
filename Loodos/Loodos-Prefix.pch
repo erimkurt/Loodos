@@ -11,4 +11,5 @@
 
 #import <AFNetworking/AFNetworking.h>
 #import "WebHelper.h"
+@import Firebase;
 #endif /* Loodos_Prefix_pch */
