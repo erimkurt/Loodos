@@ -21,7 +21,6 @@
     [super viewDidLoad];
     contentArray = [[SearchModel alloc] init];
     [self setTitle:[Config sharedInstance].nameString];
-    [self requestSearchApi:@""];
 }
 
 #pragma mark - Rest Api
@@ -70,5 +69,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - Search Bar
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [searchBar resignFirstResponder];
+    NSString *formattedForServicesString = [searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    [self requestSearchApi:formattedForServicesString];
+}
 
 @end

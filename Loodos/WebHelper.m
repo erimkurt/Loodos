@@ -30,7 +30,10 @@
 #pragma mark - Search content
 -(void)getSearchContent:(NSString*)searchString successBlock:(APISuccessBlock)successBlock errorBlock:(APISuccessBlock)errorBlock{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager GET:@"http://www.omdbapi.com/?apikey=5fc8e67e&s=star&page=1" parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+    NSString *url = [[NSString stringWithFormat:@"%@?apikey=%@&s=%@&page=1", self.path, self.apiKey, searchString] stringByAddingPercentEscapesUsingEncoding:
+    NSUTF8StringEncoding];
+
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         successBlock([self convertJSONToString:responseObject]);
     } failure:^(NSURLSessionTask *operation, NSError *error) {
         NSLog(@"Error: %@", error);
