@@ -18,6 +18,7 @@
     [super viewDidLoad];
     [self setUpUI];
     [self isReachable];
+    
 }
 
 -(void)setUpUI{
@@ -30,8 +31,14 @@
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status){
         bool isReachable = [[AFNetworkReachabilityManager sharedManager] isReachable];
         if(isReachable){
-            self.titleLabel.text = NSLocalizedString(@"YES", nil);
             self.reachabilityButton.hidden = YES;
+            [[Config sharedInstance] getConfig:^(bool isSuccess) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (isSuccess) {
+                        self.titleLabel.text = [Config sharedInstance].nameString;
+                    }
+                });
+            }];
         }else{
             self.titleLabel.text = NSLocalizedString(@"NoConnection", nil);
             self.reachabilityButton.hidden = NO;

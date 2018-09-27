@@ -8,8 +8,12 @@
 
 #ifndef Loodos_Prefix_pch
 #define Loodos_Prefix_pch
+#define AppNameConfigKeyName @"app_name_string"
 
 #import <AFNetworking/AFNetworking.h>
 #import "WebHelper.h"
+#import "Config.h"
 @import Firebase;
+@import FirebaseRemoteConfig;
+
 #endif /* Loodos_Prefix_pch */
