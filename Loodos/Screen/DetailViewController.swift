@@ -32,7 +32,7 @@ import UIKit
             DispatchQueue.main.async {
                 hud.hide(animated: true)
                 do {
-                    let jsonData: ContentDetail = try ContentDetail.init(string: (response as! String), error: nil)
+                    let jsonData: ContentDetail = try self.contentDecodable(string: (response as! String))
                     
                     self.contentImageCover.sd_setImage(with: URL(string: jsonData.poster!), placeholderImage: UIImage(named: "placeHolder"))
                     self.contentName.text = jsonData.title
@@ -57,6 +57,10 @@ import UIKit
                 hud.hide(animated: true)
             }
         })
+    }
+    
+    func contentDecodable(string: String) throws -> ContentDetail{
+        return ContentDetail.init(string: string, error: nil)
     }
     
     func analyticsEvent(content: ContentDetail){
