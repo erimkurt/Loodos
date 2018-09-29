@@ -46,7 +46,6 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     NSString *url = [[NSString stringWithFormat:@"%@?apikey=%@&i=%@", self.path, self.apiKey, imdbID] stringByAddingPercentEscapesUsingEncoding:
                      NSUTF8StringEncoding];
-    NSLog(@"%@",url);
     [manager GET:url parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         successBlock([self convertJSONToString:responseObject]);
     } failure:^(NSURLSessionTask *operation, NSError *error) {

@@ -32,7 +32,7 @@ import UIKit
             DispatchQueue.main.async {
                 hud.hide(animated: true)
                 do {
-                    let jsonData: ContentDetail = ContentDetail.init(string: (response as! String), error: nil)
+                    let jsonData: ContentDetail = try ContentDetail.init(string: (response as! String), error: nil)
                     
                     self.contentImageCover.sd_setImage(with: URL(string: jsonData.poster!), placeholderImage: UIImage(named: "placeHolder"))
                     self.contentName.text = jsonData.title

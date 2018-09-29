@@ -30,9 +30,5 @@
 @property (nonatomic) NSString *imdbVotes;
 @property (nonatomic) NSString *imdbID;
 @property (nonatomic) NSString *Type;
-@property (nonatomic) NSString *DVD;
-@property (nonatomic) NSString *BoxOffice;
-@property (nonatomic) NSString *Production;
-@property (nonatomic) NSString *Website;
 @property (nonatomic) NSString *Response;
 @end
