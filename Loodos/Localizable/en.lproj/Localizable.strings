@@ -9,3 +9,10 @@
 "language" = "English";
 "TryAgain" = "Try Again";
 "NoConnection" = "No Connection";
+
+"Actors" = "Actors";
+"Plot" = "Description";
+"ImdbRating" = "Imdb Rating";
+"Language" = "Language";
+"Released" = "Released Date";
+"Runtime" = "Runtime";

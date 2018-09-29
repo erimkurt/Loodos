@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainTableViewController : UITableViewController<UISearchBarDelegate>
+@interface MainTableViewController : UITableViewController<UISearchBarDelegate, UIScrollViewDelegate>
 
 @end

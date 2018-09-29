@@ -9,3 +9,10 @@
 "language" = "Turkish";
 "TryAgain" = "Tekrar Dene";
 "NoConnection" = "Bağlantı Yok";
+
+"Actors" = "Aktörler";
+"Plot" = "Açıklama";
+"ImdbRating" = "Imdb Puanı";
+"Language" = "Dil";
+"Released" = "Çıktığı Tarih";
+"Runtime" = "Süre";

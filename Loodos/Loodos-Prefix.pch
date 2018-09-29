@@ -19,6 +19,9 @@
 #import "Config.h"
 #import "SearchModel.h"
 #import "ContentPreview.h"
+#import "ContentRating.h"
+#import "ContentDetail.h"
+#import "Loodos-Swift.h"
 @import Firebase;
 @import FirebaseRemoteConfig;
 

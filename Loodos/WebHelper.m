@@ -23,6 +23,7 @@
             _instance.path = @"";
         #endif
         _instance.apiKey = @"5fc8e67e";
+        _instance.pageNumber = 1;
     });
     return _instance;
 }
@@ -30,9 +31,22 @@
 #pragma mark - Search content
 -(void)getSearchContent:(NSString*)searchString successBlock:(APISuccessBlock)successBlock errorBlock:(APISuccessBlock)errorBlock{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSString *url = [[NSString stringWithFormat:@"%@?apikey=%@&s=%@&page=1", self.path, self.apiKey, searchString] stringByAddingPercentEscapesUsingEncoding:
+    NSString *url = [[NSString stringWithFormat:@"%@?apikey=%@&s=%@&page=%d", self.path, self.apiKey, searchString, self.pageNumber] stringByAddingPercentEscapesUsingEncoding:
     NSUTF8StringEncoding];
-
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+        successBlock([self convertJSONToString:responseObject]);
+    } failure:^(NSURLSessionTask *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        errorBlock(error);
+    }];
+}
+    
+#pragma mark - Content cetail
+-(void)getContentDetailImdbID:(NSString*)imdbID successBlock:(APISuccessBlock)successBlock errorBlock:(APISuccessBlock)errorBlock{
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSString *url = [[NSString stringWithFormat:@"%@?apikey=%@&i=%@", self.path, self.apiKey, imdbID] stringByAddingPercentEscapesUsingEncoding:
+                     NSUTF8StringEncoding];
+    NSLog(@"%@",url);
     [manager GET:url parameters:nil progress:nil success:^(NSURLSessionTask *task, id responseObject) {
         successBlock([self convertJSONToString:responseObject]);
     } failure:^(NSURLSessionTask *operation, NSError *error) {

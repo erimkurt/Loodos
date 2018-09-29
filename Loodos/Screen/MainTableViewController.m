@@ -12,6 +12,7 @@
 @interface MainTableViewController ()
 {
     SearchModel *contentArray;
+    NSString *searchKey;
 }
 @end
 
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [WebHelper sharedInstance].pageNumber = 1;
     contentArray = [[SearchModel alloc] init];
     [self setTitle:[Config sharedInstance].nameString];
 }
@@ -27,7 +29,17 @@
 -(void)requestSearchApi:(NSString *)searchKey{
     [[WebHelper sharedInstance] getSearchContent:searchKey successBlock:^(id result) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            self->contentArray = [[SearchModel alloc] initWithString:result error:nil];
+            SearchModel *response = [[SearchModel alloc] initWithString:result error:nil];
+            if ([response.Response boolValue]) {
+                if (self->contentArray.Search) {
+                    self->contentArray.Search = [self->contentArray.Search arrayByAddingObjectsFromArray:response.Search];
+                }else{
+                    self->contentArray = response;
+                }
+            }else{
+                //NO Result
+                
+            }
             [self.tableView reloadData];
         });
     } errorBlock:^(id result) {
@@ -38,8 +50,8 @@
 
 #pragma mark - Table view data source
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
+    ContentPreview *content = contentArray.Search[indexPath.row];
+    [self performSegueWithIdentifier:@"detailContent" sender:content];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -60,20 +72,31 @@
     return UITableViewAutomaticDimension;
 }
 
-/*
 #pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqual:@"detailContent"]) {
+        DetailViewController *vc = (DetailViewController*)segue.destinationViewController;
+        vc.contentPreview = (ContentPreview *)sender;
+    }
 }
-*/
+
 #pragma mark - Search Bar
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [searchBar resignFirstResponder];
-    NSString *formattedForServicesString = [searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-    [self requestSearchApi:formattedForServicesString];
+    contentArray = [[SearchModel alloc] init];
+    searchKey = [searchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    [WebHelper sharedInstance].pageNumber = 1;
+    [self requestSearchApi:searchKey];
+}
+
+#pragma mark Scroll view delegate
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    float bottomEdge = scrollView.contentOffset.y + scrollView.frame.size.height;
+    if (bottomEdge >= scrollView.contentSize.height)
+    {
+        [WebHelper sharedInstance].pageNumber += 1;
+        [self requestSearchApi:searchKey];
+    }
 }
 
 @end
