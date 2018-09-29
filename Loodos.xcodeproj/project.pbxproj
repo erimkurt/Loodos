@@ -69,6 +69,7 @@
 		D06668AF215F78D900D9D64A /* ContentRating.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentRating.h; sourceTree = "<group>"; };
 		D06668B0215F78D900D9D64A /* ContentRating.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentRating.m; sourceTree = "<group>"; };
 		D06668B2215F7E1000D9D64A /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		D06668B4215F8FD300D9D64A /* Loodos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Loodos.entitlements; sourceTree = "<group>"; };
 		DC4C334BEDEF01295F96520C /* libPods-Loodos.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Loodos.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -122,6 +123,7 @@
 		D029B3BC215C112000FABB2A /* Loodos */ = {
 			isa = PBXGroup;
 			children = (
+				D06668B4215F8FD300D9D64A /* Loodos.entitlements */,
 				D038237C215D257900FF5445 /* Extension */,
 				D038236D215D0B4000FF5445 /* Model */,
 				D0382355215CD25300FF5445 /* Localizable */,
@@ -232,6 +234,11 @@
 					D029B3B9215C112000FABB2A = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -465,6 +472,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Loodos/Loodos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7V6T84YYL;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Loodos/Loodos-Prefix.pch";
@@ -489,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Loodos/Loodos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7V6T84YYL;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Loodos/Loodos-Prefix.pch";

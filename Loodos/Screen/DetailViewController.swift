@@ -26,8 +26,11 @@ import UIKit
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = contentPreview.title
+        
+        let hud: MBProgressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
         WebHelper.sharedInstance().getContentDetailImdbID(contentPreview.imdbID, successBlock: {response in
             DispatchQueue.main.async {
+                hud.hide(animated: true)
                 do {
                     let jsonData: ContentDetail = ContentDetail.init(string: (response as! String), error: nil)
                     
@@ -43,6 +46,7 @@ import UIKit
                     self.contentList.append(Detail(title: NSLocalizedString("Language", comment: ""), description: jsonData.language))
                     self.contentList.append(Detail(title: NSLocalizedString("Released", comment: ""), description: jsonData.released))
                     self.contentList.append(Detail(title: NSLocalizedString("Runtime", comment: ""), description: jsonData.runtime))
+                    self.analyticsEvent(content: jsonData)
                     self.tableView.reloadData()
                 } catch {
                     print("\(error)")
@@ -50,8 +54,19 @@ import UIKit
             }
         }, errorBlock: { error in
             DispatchQueue.main.async {
+                hud.hide(animated: true)
             }
         })
+    }
+    
+    func analyticsEvent(content: ContentDetail){
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemID: content.imdbID,
+            AnalyticsParameterItemName: content.title,
+            "actors": content.actors,
+            "imdbRating": content.imdbRating,
+            "language": content.language,
+            ])
     }
 }
 

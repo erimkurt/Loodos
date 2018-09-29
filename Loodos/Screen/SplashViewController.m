@@ -32,8 +32,10 @@
         bool isReachable = [[AFNetworkReachabilityManager sharedManager] isReachable];
         if(isReachable){
             self.reachabilityButton.hidden = YES;
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
             [[Config sharedInstance] getConfig:^(bool isSuccess) {
                 dispatch_async(dispatch_get_main_queue(), ^{
+                    [hud hideAnimated:YES];
                     if (isSuccess) {
                         self.titleLabel.text = [Config sharedInstance].nameString;
                         [self performSelector:@selector(loginMainView) withObject:nil afterDelay:3.0];

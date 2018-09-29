@@ -16,3 +16,7 @@
 "Language" = "Language";
 "Released" = "Released Date";
 "Runtime" = "Runtime";
+
+"Ok" = "Ok";
+"Error" = "Error";
+"NoResult" = "No results found for %@";

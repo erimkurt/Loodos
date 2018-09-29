@@ -27,8 +27,10 @@
 
 #pragma mark - Rest Api
 -(void)requestSearchApi:(NSString *)searchKey{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[WebHelper sharedInstance] getSearchContent:searchKey successBlock:^(id result) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            [hud hideAnimated:YES];
             SearchModel *response = [[SearchModel alloc] initWithString:result error:nil];
             if ([response.Response boolValue]) {
                 if (self->contentArray.Search) {
@@ -38,12 +40,18 @@
                 }
             }else{
                 //NO Result
-                
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", nil)
+                                                                message:[NSString stringWithFormat:NSLocalizedString(@"NoResult", nil),self->searchKey]
+                                                               delegate:self
+                                                      cancelButtonTitle:NSLocalizedString(@"Ok", nil)
+                                                      otherButtonTitles:nil];
+                [alert show];
             }
             [self.tableView reloadData];
         });
     } errorBlock:^(id result) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            [hud hideAnimated:YES];
         });
     }];
 }

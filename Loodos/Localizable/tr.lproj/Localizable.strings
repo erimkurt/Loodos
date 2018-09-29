@@ -16,3 +16,7 @@
 "Language" = "Dil";
 "Released" = "Çıktığı Tarih";
 "Runtime" = "Süre";
+
+"Ok" = "Tamam";
+"Error" = "Hata";
+"NoResult" = "%@ için sonuç bulunamadı";
